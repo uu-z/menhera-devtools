@@ -5,11 +5,11 @@ const { host = "http://localhost", port = 2333 } = {};
 
 let fullHost = `${host}:${port}`;
 
-const SocketIOClient = {
-  name: "SocketClient",
+const IOClient = {
+  name: "IOClient",
   socket: null,
   _hooks: {
-    SocketIOClient: {
+    IOClient: {
       host({ _val }) {
         this.socket = io(_val);
       },
@@ -19,7 +19,7 @@ const SocketIOClient = {
         }
       },
       emit: {
-        $({ _key, _va }) {
+        $({ _key, _val }) {
           this.socket.emit(_key, _val);
         }
       }
@@ -28,8 +28,8 @@ const SocketIOClient = {
 };
 
 const _ = new Menehra({
-  _mount: { SocketIO },
-  SocketIOClient: {
+  _mount: { IOClient },
+  IOClient: {
     host: fullHost,
     on: {
       connect() {

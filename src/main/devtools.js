@@ -19,10 +19,10 @@ const _ = new Menehra({
         socket.disconnect();
         console.log("disconnect");
       },
-      "mhr-message": data => {}
+      "mhr-message": data => {
+        console.log(data);
+      }
     }),
-    emit: {
-      "mhr-message": "test"
-    }
+    emit: {}
   }
 });

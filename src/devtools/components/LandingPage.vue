@@ -7,9 +7,7 @@ div
 export default {
   name: "landing-page",
   data() {
-    return {
-      _: {}
-    };
+    return {};
   },
   $use: {
     test: [
@@ -17,9 +15,7 @@ export default {
       { id: 2, profile: { mobile: 123213 } }
     ]
   },
-  mounted() {
-    this.$data._ = window._;
-  },
+  mounted() {},
   methods: {
     open(link) {
       this.$electron.shell.openExternal(link);

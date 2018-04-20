@@ -7,16 +7,7 @@ let url = `${host}:${port}`;
 
 const _ = new Menhera({
   _mount: { IOClient },
-  _hooks: {
-    test: {
-      A$({ _val }) {
-        const {
-          profile: { mobile }
-        } = _val;
-        console.log(_val, mobile);
-      }
-    }
-  },
+  _hooks: {},
   IOClient: {
     config: {
       url
@@ -38,6 +29,9 @@ const _ = new Menhera({
     }),
     emit: {}
   }
+});
+_.events.on("$use", _object => {
+  console.log("on $use:", _object);
 });
 window._ = _;
 export default _;

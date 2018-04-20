@@ -5,9 +5,24 @@ const { host = "http://localhost", port = 2333 } = {};
 
 let url = `${host}:${port}`;
 
+const Logger = {
+  name: "Logger",
+  _hooks: {
+    Logger: {
+      _({ _, _val }) {
+        const { log } = _val;
+        if (log) {
+          _.events.on("$use", _object => {
+            console.log("$use:", _object);
+          });
+        }
+      }
+    }
+  }
+};
+
 const _ = new Menhera({
-  _mount: { IOClient },
-  _hooks: {},
+  _mount: { IOClient, Logger },
   IOClient: {
     config: {
       url
@@ -28,10 +43,11 @@ const _ = new Menhera({
       }
     }),
     emit: {}
+  },
+  Logger: {
+    log: true
   }
 });
-_.events.on("$use", _object => {
-  console.log("on $use:", _object);
-});
+
 window._ = _;
 export default _;

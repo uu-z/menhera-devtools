@@ -488,6 +488,22 @@
   dependencies:
     "@types/babel-types" "*"
 
+"@types/lodash.get@^4.4.3":
+  version "4.4.3"
+  resolved "https://registry.npmjs.org/@types/lodash.get/-/lodash.get-4.4.3.tgz#ac823d175a9593c10555b5097b72281effd544b5"
+  dependencies:
+    "@types/lodash" "*"
+
+"@types/lodash.set@^4.3.3":
+  version "4.3.3"
+  resolved "https://registry.npmjs.org/@types/lodash.set/-/lodash.set-4.3.3.tgz#3a08ca068717a9784ebd2ab489e0376a32d7228a"
+  dependencies:
+    "@types/lodash" "*"
+
+"@types/lodash@*":
+  version "4.14.107"
+  resolved "https://registry.npmjs.org/@types/lodash/-/lodash-4.14.107.tgz#b2d2ae3958bfb8ff828495cbe12214af9e4d035e"
+
 "@types/node@*":
   version "9.6.5"
   resolved "http://registry.npm.taobao.org/@types/node/download/@types/node-9.6.5.tgz#ee700810fdf49ac1c399fc5980b7559b3e5a381d"
@@ -5354,6 +5370,10 @@ lodash.get@^4.4.2:
   version "4.4.2"
   resolved "https://registry.npmjs.org/lodash.get/-/lodash.get-4.4.2.tgz#2d177f652fa31e939b4438d5341499dfa3825e99"
 
+lodash.has@^4.5.2:
+  version "4.5.2"
+  resolved "https://registry.npmjs.org/lodash.has/-/lodash.has-4.5.2.tgz#d19f4dc1095058cccbe2b0cdf4ee0fe4aa37c862"
+
 lodash.isarguments@^3.0.0:
   version "3.1.0"
   resolved "http://registry.npm.taobao.org/lodash.isarguments/download/lodash.isarguments-3.1.0.tgz#2f573d85c6a24289ff00663b491c1d338ff3458a"
@@ -5545,11 +5565,14 @@ memory-fs@^0.4.0, memory-fs@~0.4.1:
     errno "^0.1.3"
     readable-stream "^2.0.1"
 
-menhera@^0.6.6-rc1:
-  version "0.6.6-rc1"
-  resolved "https://registry.npmjs.org/menhera/-/menhera-0.6.6-rc1.tgz#f392b26fc12df5cad44989af54671874eee455b9"
+menhera@^0.6.6-rc3:
+  version "0.6.6-rc3"
+  resolved "https://registry.npmjs.org/menhera/-/menhera-0.6.6-rc3.tgz#1cce8aedd4722fb8d35449dac19ee36734d425d7"
   dependencies:
+    "@types/lodash.get" "^4.4.3"
+    "@types/lodash.set" "^4.3.3"
     lodash.get "^4.4.2"
+    lodash.has "^4.5.2"
     lodash.set "^4.3.2"
 
 meow@^3.1.0, meow@^3.3.0:

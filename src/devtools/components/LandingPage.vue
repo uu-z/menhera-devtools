@@ -1,21 +1,23 @@
 <template lang="pug">
 div
-  h1 Hello world!
+  ul
+    li(v-for="item in useList") {{item}}
 </template>
 
 <script>
 export default {
   name: "landing-page",
   data() {
-    return {};
+    return {
+      useList: []
+    };
   },
-  $use: {
-    test: [
-      { id: 1, profile: { mobile: 123213 } },
-      { id: 2, profile: { mobile: 123213 } }
-    ]
+  $use: {},
+  beforeCreate() {
+    _.events.on("$use", _object => {
+      this.useList.push(_object);
+    });
   },
-  mounted() {},
   methods: {
     open(link) {
       this.$electron.shell.openExternal(link);

@@ -5,11 +5,12 @@
 </template>
 
 <script>
-  export default {
-    name: 'menhera-devtool'
-  }
+export default {
+  name: "menhera-devtool",
+  subscriptions: {}
+};
 </script>
 
 <style>
-  /* CSS */
+/* CSS */
 </style>

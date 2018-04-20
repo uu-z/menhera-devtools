@@ -1,12 +1,22 @@
-import Menehra, { $ } from "menhera";
+import Menhera from "menhera";
 import { IOClient } from "./mhr-socketio";
 
 const { host = "http://localhost", port = 2333 } = {};
 
 let url = `${host}:${port}`;
 
-const _ = new Menehra({
+const _ = new Menhera({
   _mount: { IOClient },
+  _hooks: {
+    test: {
+      A$({ _val }) {
+        const {
+          profile: { mobile }
+        } = _val;
+        console.log(_val, mobile);
+      }
+    }
+  },
   IOClient: {
     config: {
       url
@@ -19,6 +29,9 @@ const _ = new Menehra({
         socket.disconnect();
         console.log("disconnect");
       },
+      "mhr-devtools-init": () => {
+        console.log("mhr-devtools-init");
+      },
       "mhr-message": data => {
         console.log(data);
       }
@@ -26,3 +39,5 @@ const _ = new Menehra({
     emit: {}
   }
 });
+window._ = _;
+export default _;

@@ -22,7 +22,7 @@ const _ = new Menehra({
       "mhr-message": data => {}
     }),
     emit: {
-      "mhr-message": "test"
+      "mhr-devtools-init": true
     }
   }
 });

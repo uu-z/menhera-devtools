@@ -1,7 +1,6 @@
 "use strict";
 
 import "./server";
-import "./devtools";
 import "./client";
 import { app, BrowserWindow } from "electron";
 

@@ -53,16 +53,26 @@
     }
   },
   "dependencies": {
+    "@types/pug": "^2.0.4",
     "@types/socket.io": "^1.4.33",
     "@types/socket.io-client": "^1.4.32",
+    "@types/stylus": "^0.48.30",
     "axios": "^0.16.1",
     "koa": "^2.5.0",
-    "menhera": "^0.6.1-rc5",
+    "menhera": "^0.6.4-rc3",
+    "pug": "^2.0.3",
+    "pug-loader": "^2.4.0",
+    "rxjs": "^5.5.10",
+    "sass-loader": "^7.0.1",
     "socket.io": "^2.1.0",
     "socket.io-client": "^2.1.0",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.2",
     "vue": "^2.3.3",
+    "vue-codemirror": "^4.0.4",
     "vue-electron": "^1.0.6",
     "vue-router": "^2.5.3",
+    "vue-rx": "^5.0.0",
     "vuex": "^2.3.1"
   },
   "devDependencies": {

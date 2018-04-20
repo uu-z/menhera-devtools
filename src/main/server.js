@@ -19,6 +19,9 @@ _.$use({
     },
     on: {
       connection: socket => ({
+        "mhr-devtools-init": () => {
+          socket.broadcast.emit("mhr-devtools-init");
+        },
         "mhr-message": data => {
           socket.broadcast.emit("mhr-message", data);
         }

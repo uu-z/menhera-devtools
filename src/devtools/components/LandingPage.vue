@@ -1,7 +1,5 @@
 <template lang="pug">
-div
-  ul
-    li(v-for="item in useList") {{item}}
+  <tree-view :data="data" :options="{maxDepth: 3,modifiable: true}" @change-data="onChangeData" ></tree-view>
 </template>
 
 <script>
@@ -9,16 +7,21 @@ export default {
   name: "landing-page",
   data() {
     return {
-      useList: []
+      data: null
     };
   },
-  $use: {},
+  mounted() {
+    this.data = _;
+  },
   beforeCreate() {
     _.events.on("$use", _object => {
       this.useList.push(_object);
     });
   },
   methods: {
+    onChangeData(data) {
+      this.data = data;
+    },
     open(link) {
       this.$electron.shell.openExternal(link);
     }

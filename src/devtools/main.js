@@ -1,9 +1,10 @@
 import Vue from "vue";
 import axios from "axios";
-import VueCodemirror from "vue-codemirror";
+import TreeView from "vue-json-tree-view";
 import "../main/devtools";
 
-import "codemirror/lib/codemirror.css";
+// import VueCodemirror from "vue-codemirror";
+// import "codemirror/lib/codemirror.css";
 
 import App from "./App";
 import router from "./router";
@@ -13,24 +14,19 @@ if (!process.env.IS_WEB) Vue.use(require("vue-electron"));
 Vue.http = Vue.prototype.$http = axios;
 Vue.config.productionTip = false;
 
-import Rx from "rxjs/Rx";
-import VueRx from "vue-rx";
+Vue.use(TreeView);
 
-// tada!
-Vue.use(VueRx, Rx);
-
-Vue.use(VueCodemirror);
-Vue.use(Vue => {
-  Vue.mixin({
-    created() {
-      const vm = this;
-      const use = vm.$options.$use;
-      if (use) {
-        _.$use(use);
-      }
-    }
-  });
-});
+// Vue.use(Vue => {
+//   Vue.mixin({
+//     created() {
+//       const vm = this;
+//       const use = vm.$options.$use;
+//       if (use) {
+//         _.$use(use);
+//       }
+//     }
+//   });
+// });
 
 /* eslint-disable no-new */
 new Vue({

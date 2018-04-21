@@ -22,7 +22,7 @@ const Logger = {
 };
 
 const _ = new Menhera({
-  _mount: { IOClient, Logger, utils },
+  _mount: { IOClient, Logger },
   IOClient: {
     config: {
       url
@@ -50,4 +50,5 @@ const _ = new Menhera({
 });
 
 window._ = _;
+window.$use = _.$use;
 export default _;

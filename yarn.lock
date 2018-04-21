@@ -488,6 +488,10 @@
   dependencies:
     "@types/babel-types" "*"
 
+"@types/codemirror@0.0.56":
+  version "0.0.56"
+  resolved "https://registry.npmjs.org/@types/codemirror/-/codemirror-0.0.56.tgz#1fcf68df0d0a49791d843dadda7d94891ac88669"
+
 "@types/lodash.get@^4.4.3":
   version "4.4.3"
   resolved "https://registry.npmjs.org/@types/lodash.get/-/lodash.get-4.4.3.tgz#ac823d175a9593c10555b5097b72281effd544b5"
@@ -2338,6 +2342,10 @@ code-point-at@^1.0.0:
 codemirror@^5.32.0:
   version "5.36.0"
   resolved "https://registry.npmjs.org/codemirror/-/codemirror-5.36.0.tgz#1172ad9dc298056c06e0b34e5ccd23825ca15b40"
+
+codemirror@^5.37.0:
+  version "5.37.0"
+  resolved "https://registry.npmjs.org/codemirror/-/codemirror-5.37.0.tgz#c349b584e158f590277f26d37c2469a6bc538036"
 
 collection-visit@^1.0.0:
   version "1.0.0"
@@ -8432,9 +8440,9 @@ void-elements@^2.0.1:
   version "2.0.1"
   resolved "https://registry.npmjs.org/void-elements/-/void-elements-2.0.1.tgz#c066afb582bb1cb4128d60ea92392e94d5e9dbec"
 
-vue-codemirror@^4.0.4:
-  version "4.0.4"
-  resolved "https://registry.npmjs.org/vue-codemirror/-/vue-codemirror-4.0.4.tgz#e319b7a6fe35b3364a8c40969a22ebf162df7279"
+vue-codemirror@^4.0.5:
+  version "4.0.5"
+  resolved "https://registry.npmjs.org/vue-codemirror/-/vue-codemirror-4.0.5.tgz#3a784d454fbfb17ce769b9fc90f10e9868687ecb"
   dependencies:
     codemirror "^5.32.0"
     diff-match-patch "^1.0.0"
@@ -8507,6 +8515,12 @@ vue-template-compiler@^2.4.2:
 vue-template-es2015-compiler@^1.6.0:
   version "1.6.0"
   resolved "http://registry.npm.taobao.org/vue-template-es2015-compiler/download/vue-template-es2015-compiler-1.6.0.tgz#dc42697133302ce3017524356a6c61b7b69b4a18"
+
+vue-uuid@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.npmjs.org/vue-uuid/-/vue-uuid-1.0.0.tgz#eaf7631e1c5fcabcd06c0031caa5f7dab740c90d"
+  dependencies:
+    uuid "^3.1.0"
 
 vue@^2.0.0, vue@^2.3.3:
   version "2.5.16"

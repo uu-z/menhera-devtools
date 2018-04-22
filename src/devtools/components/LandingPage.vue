@@ -1,17 +1,15 @@
 <template lang="pug">
-  div.eventsBox
-    //- tree-view(:data="data" :options="{maxDepth: 3,modifiable: true}" @change-data="onChangeData")
-    ul
+  div.page-landingPage
+    tree-view(:data="data" :options="{maxDepth: 3,modifiable: true}" @change-data="onChangeData")
+    ul.list-eventUse
       li(v-for="(item, i) in uses", @click="currentUseID = i" :key = "i") {{item.name}}
     div
       tree-view( v-if=`viewMode == "Tree"` :data="currentUse" :options="{maxDepth: 3}")
       codemirror( v-if=`viewMode == "Edit"` v-model="currentUseString" :options="cmOptions")
-      button(@click=`ToggleVieMode("Tree")`) Tree
-      button(@click=`ToggleVieMode("Edit")`) Edit      
-      
-      
-    codemirror(v-model="code" :options="cmOptions")
-    button(@click="use") Use
+      //- button(@click=`ToggleVieMode("Tree")`) Tree
+      //- button(@click=`ToggleVieMode("Edit")`) Edit      
+      codemirror(v-model="code" :options="cmOptions")
+      button(@click="use") Use
 </template>
 
 <script>
@@ -77,7 +75,11 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-.eventsBox {
+.page-landingPage {
   display: flex;
+}
+
+.list-eventUse {
+  padding: 2vh 5vw;
 }
 </style>
